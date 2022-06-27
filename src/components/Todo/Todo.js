@@ -3,12 +3,25 @@ import TodoForm from '../TodoForm/TodoForm'
 import { RiCloseCircleLine} from 'react-icons/ri'
 import { TiEdit} from 'react-icons/ti'
 import './todo.css'
+import { editableInputTypes } from '@testing-library/user-event/dist/utils'
 
-const Todo = ({todos, completeTodo, removeTodo}) => {
+const Todo = ({todos, completeTodo, removeTodo, updateTodo}) => {
     const [edit, setEdit] = useState({
         id: null,
         value: ''
     })
+
+    const submitUpdate = value => {
+        updateTodo(edit.id, value)
+        setEdit({
+            id: null,
+            value: ''
+        })
+    }
+
+    if (edit.id) {
+        return <TodoForm edit={edit} onSubmit={submitUpdate} />
+    }
 
   return todos.map((todo, index) => (
     <div className={todo.isComplate ? 'todo-row complate' : 'todo-row'} key={index}>
