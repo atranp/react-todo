@@ -70,11 +70,11 @@ h1 {
   text-transform: capitalize;
 }
 
-.todo-input.edit {
+.todo-input .edit {
   border: 2px solid #149fff;
 }
 
-.todo-button.edit {
+.todo-button .edit {
   background: linear-gradient(
     90deg,
     rgba(20, 159, 255, 1) 0%,
