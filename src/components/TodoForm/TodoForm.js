@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef } from 'react'
-import './todoForm.css'
 
 const TodoForm = (props) => {
     const [input, setInput] = useState('');

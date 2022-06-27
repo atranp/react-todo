@@ -2,7 +2,6 @@ import React, {useState} from 'react'
 import TodoForm from '../TodoForm/TodoForm'
 import { RiCloseCircleLine} from 'react-icons/ri'
 import { TiEdit} from 'react-icons/ti'
-import './todo.css'
 
 const Todo = ({todos, completeTodo, removeTodo, updateTodo}) => {
     const [edit, setEdit] = useState({
