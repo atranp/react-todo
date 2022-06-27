@@ -3,7 +3,6 @@ import TodoForm from '../TodoForm/TodoForm'
 import { RiCloseCircleLine} from 'react-icons/ri'
 import { TiEdit} from 'react-icons/ti'
 import './todo.css'
-import { editableInputTypes } from '@testing-library/user-event/dist/utils'
 
 const Todo = ({todos, completeTodo, removeTodo, updateTodo}) => {
     const [edit, setEdit] = useState({
